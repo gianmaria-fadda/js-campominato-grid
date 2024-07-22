@@ -1,7 +1,10 @@
-// Commento singola riga
+const cells = 100
+console.log('cells', cells, typeof cells);
 
-/*
+document.createElement('div')
 
-    Commento multipla riga
+for (let i = 0; i < cells; i++) {
+    const element = document.createElement('div');
 
-*/
+    document.getElementById('grid-container').append(element)
+}

@@ -1,17 +1,25 @@
-const cells = 100
-console.log('cells', cells, typeof cells);
+document.addEventListener('DOMContentLoaded', function () {
+    const cells = 100;
+    console.log('cells', cells, typeof cells);
 
-const gridContainer = document.getElementById('grid-container');
+    const gridContainer = document.getElementById('grid-container');
+    const playButton = document.getElementById('play-button');
 
-for (let i = 0; i < cells; i++) {
-    const newCell = document.createElement('div');
-    newCell.innerHTML = i + 1;
+    playButton.addEventListener('click', function () {
+        // Rimuovi eventuali celle esistenti
+        gridContainer.innerHTML = '';
 
-    newCell.addEventListener('click', function () {
-        newCell.classList.toggle('color-light-coral');
+        for (let i = 0; i < cells; i++) {
+            const newCell = document.createElement('div');
+            newCell.innerHTML = i + 1;
 
-        console.log(newCell.textContent);
+            newCell.addEventListener('click', function () {
+                newCell.classList.toggle('color-light-coral');
+
+                console.log(newCell.textContent);
+            });
+
+            gridContainer.append(newCell);
+        }
     });
-
-    gridContainer.append(newCell);
-};
+});

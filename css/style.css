@@ -19,3 +19,18 @@ html {
     margin: 0 auto;
 }
 
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid-container > * {
+    text-align: center;
+    width: calc(100% / 5);
+    height: 200px;
+    border: 1px solid white;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

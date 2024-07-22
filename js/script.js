@@ -9,6 +9,8 @@ for (let i = 0; i < cells; i++) {
 
     newCell.addEventListener('click', function () {
         newCell.classList.toggle('color-light-coral');
+
+        console.log(newCell.textContent);
     });
 
     gridContainer.append(newCell);

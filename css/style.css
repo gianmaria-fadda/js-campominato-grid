@@ -34,3 +34,8 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+#grid-container > .color-light-coral {
+    border: 1px solid white;
+    background-color: lightcoral;
+}

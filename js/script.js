@@ -1,11 +1,15 @@
 const cells = 100
 console.log('cells', cells, typeof cells);
 
-document.createElement('div')
+const gridContainer = document.getElementById('grid-container');
 
 for (let i = 0; i < cells; i++) {
-    const element = document.createElement('div');
-    element.innerHTML = i + 1;
+    const newCell = document.createElement('div');
+    newCell.innerHTML = i + 1;
 
-    document.getElementById('grid-container').append(element)
-}
+    newCell.addEventListener('click', function () {
+        newCell.classList.toggle('color-light-coral');
+    });
+
+    gridContainer.append(newCell);
+};

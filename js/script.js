@@ -1,25 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const cells = 100;
-    console.log('cells', cells, typeof cells);
+const cells = 100;
+console.log('cells', cells, typeof cells);
 
-    const gridContainer = document.getElementById('grid-container');
-    const playButton = document.getElementById('play-button');
+const gridContainer = document.getElementById('grid-container');
+const playButton = document.getElementById('play-button');
 
-    playButton.addEventListener('click', function () {
-        // Rimuovi eventuali celle esistenti
-        gridContainer.innerHTML = '';
+playButton.addEventListener('click', function () {
+    // Rimuovi eventuali celle esistenti
+    gridContainer.innerHTML = '';
 
-        for (let i = 0; i < cells; i++) {
-            const newCell = document.createElement('div');
-            newCell.innerHTML = i + 1;
+    for (let i = 0; i < cells; i++) {
+        const newCell = document.createElement('div');
+        newCell.innerHTML = i + 1;
 
-            newCell.addEventListener('click', function () {
-                newCell.classList.toggle('color-light-coral');
+        newCell.addEventListener('click', function () {
+            newCell.classList.toggle('color-light-coral');
 
-                console.log(newCell.textContent);
-            });
+            console.log(newCell.textContent);
+        });
 
-            gridContainer.append(newCell);
-        }
-    });
+        gridContainer.append(newCell);
+    }
 });

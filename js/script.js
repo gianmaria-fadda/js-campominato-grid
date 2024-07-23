@@ -5,7 +5,6 @@ const gridContainer = document.getElementById('grid-container');
 const playButton = document.getElementById('play-button');
 
 playButton.addEventListener('click', function () {
-    // Rimuovi eventuali celle esistenti
     gridContainer.innerHTML = '';
 
     for (let i = 0; i < cells; i++) {
